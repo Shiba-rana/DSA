@@ -11,4 +11,4 @@ function firstUniqChar(s) {
     return -1
 }
 console.log(firstUniqChar("leetcode"));
-console.log(firstUniqChar("Shiva"));
+console.log(firstUniqChar("Shiva")); 
