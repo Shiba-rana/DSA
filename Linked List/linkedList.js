@@ -93,6 +93,7 @@ class LinkedList {
     }
     return -1
   }
+  
 
   isEmpty() {
     return this.size === 0;

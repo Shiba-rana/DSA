@@ -7,4 +7,5 @@ function middleList(head) {
         slow = slow
     }
     return slow
+    
 }
