@@ -33,7 +33,7 @@ class LinkedList {
     for (let i = 0; i < index - 1; i++) {
       temp = temp.next;
     }
-    newNode.next = temp.next
+    newNode.next = temp.next;
     temp.next = newNode;
 
     this.size++;
@@ -53,19 +53,51 @@ class LinkedList {
 
   // Remove at Head
   removeAtHead() {
-    if(this.isEmpty()) return "List is already empty"
+    if (this.isEmpty()) return "List is already empty";
 
-    this.head = this.head.next
+    this.head = this.head.next;
   }
 
   // Remove element
+  removeElement(data) {
+    if (this.isEmpty()) return "List is already empty";
+
+    let current = this.head;
+    let prev = null 
+
+    while(current) {
+      if(current.data === data) {
+        if(prev === null) {
+          this.head = current.next
+        } else {
+          prev.next = current.next
+        }
+        return current.element
+      }
+      prev = current 
+      current = prev.next
+    }
+  }
 
   // Search item
+  searchElement(data) {
+    let curr = this.head
+    let index = 0
+
+    while(curr) {
+      if(curr.data === data) {
+        return index
+      }
+      index++
+      curr = curr.next
+    }
+    return -1
+  }
 
   // Moddle of Linked list
 
   isEmpty() {
-    return this.size === 0
+    return this.size === 0;
   }
 }
 
@@ -76,6 +108,8 @@ list.insertAtHead(50);
 list.insertAtHead(34);
 list.insertAtIndex(2, 46);
 list.insertAtIndex(1, 48);
-list.removeAtHead()
+list.removeAtHead();
+// list.removeElement(50)
+list.searchElement(50)
 
 console.log(list.print());
