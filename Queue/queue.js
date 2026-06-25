@@ -1,6 +1,7 @@
 class Queue {
   constructor() {
     this.queue = [];
+    
   }
 
   enqueue(data) {
