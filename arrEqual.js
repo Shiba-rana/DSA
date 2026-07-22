@@ -13,7 +13,6 @@
 // }
 // console.log(isArrEqual([1,4,3], [1,2,3]))
 
-
 //! 2
 const isArrEqual = (arr1, arr2) => {
     return arr1.length === arr2.length && arr1.every((ele, i) => arr1[i] === arr2[i])
